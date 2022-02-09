@@ -1,0 +1,29 @@
+<?php if ($widgetTitle = $block->getData('widgettitle')): ?>
+    <h2><?= $widgetTitle ?></h2>
+<?php endif; ?>
+
+<?php if ($pageMultiSelect = $block->getData('pagemultiselect')): ?>
+    <?php $pageIds = explode(",", $pageMultiSelect); ?>
+    <ul>
+        <?php foreach ($block->getPageList($pageIds) as $page): ?>
+            <li>
+                <a href="<?= $block->getUrl($page->getIdentifier()); ?>">
+                    <?= $page->getTitle(); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <ul>
+        <?php foreach ($block->getPageList() as $page): ?>
+            <li>
+                <a href="<?= $block->getUrl($page->getIdentifier()); ?>">
+                    <?= $page->getTitle(); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+
+

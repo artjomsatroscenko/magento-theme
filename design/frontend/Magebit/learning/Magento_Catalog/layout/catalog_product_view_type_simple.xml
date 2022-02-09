@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Magento_Catalog::js/qty-counter.js"/>
+        <link src="js/qty-counter.js"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.overview" remove="true"/>
+        <referenceBlock name="product.info.details" remove="true"/>
+
+        <referenceContainer name="product.info.main">
+            <block class="Magebit\Attributes\Block\Attributes" name="product.info.description" template="Magento_Catalog::product/view/attributes.phtml"/>
+        </referenceContainer>
+
+        <move element="product.info.description" destination="product.info.price" as="product_info_main"/>
+        <move element="product.info.upsell" destination="product.info.addtocart" as="product_info_upsell"/>
+        <move element="product.info.type" destination="product.info.price" as="product_instock"/>
+<!--        <move element="catalog.product.related" destination="content" after="-" as="catalog_product_related"/>-->
+    </body>
+</page>
