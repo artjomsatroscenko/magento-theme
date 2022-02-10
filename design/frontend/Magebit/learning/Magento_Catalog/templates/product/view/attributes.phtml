@@ -1,17 +1,25 @@
 <?php
 /** @var Attributes $block */
-
-use Magebit\Attributes\Block\Attributes;
-
-echo "<div class ='product-description'><ul>";
-foreach ($block->getThreeAttributes() as $a) {
-    echo "<li><b>" . $a['value'] . "</b>: ";
-    echo $a['label'] . "</li>";
-}
-echo "</ul>";
-
-echo "<div class='short-description'>";
-echo $block->showDesc();
-echo "</div>";
-echo "</div>";
 ?>
+<div class='product-description'>
+
+    <ul>
+    <?php foreach ($block->getThreeAttributes() as $a): ?>
+        <li>
+            <b>
+                <?= $a['value']; ?>:
+            </b>
+                <?= $a['label']; ?>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+
+
+
+    <div class='short-description'>
+        <?php
+        echo $block->description->getProduct()->getShortDescription();
+        ?>
+    </div>
+</div>
+

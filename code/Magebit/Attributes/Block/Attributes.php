@@ -7,7 +7,7 @@ use Magento\Catalog\Block\Product\View\Description;
 
 class Attributes extends Template
 {
-    protected Description $description;
+    public Description $description;
 
     public function __construct(
         Description      $description,

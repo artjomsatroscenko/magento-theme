@@ -8,14 +8,14 @@ use Magento\Framework\Option\ArrayInterface;
 class Pages implements ArrayInterface
 {
     protected CollectionFactory $collectionFactory;
+
     public function __construct(
         CollectionFactory $collectionFactory
-    )
-    {
+    ){
         $this->collectionFactory = $collectionFactory;
     }
 
-   /* Get Pages Collection from site. */
+    /* Get Pages Collection from site. */
     public function toOptionArray(): array
     {
         $pages = [];
@@ -23,7 +23,7 @@ class Pages implements ArrayInterface
         foreach ($collection as $page) {
             $pages[] = [
                 'value' => $page->getId(),
-                'label' => $page->getTitle(),
+                'label' => $page->getTitle()
             ];
         }
         return $pages;
