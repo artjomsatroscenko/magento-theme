@@ -10,6 +10,7 @@ a.action.add {
 .product-info-main .action.add {
     border: 1px solid black;
     display: inline-block;
+    border-radius: 3px;
 }
 
 .product-info-main .product-info-price {
@@ -142,14 +143,6 @@ block-title.title {
     font-size: 12px;
 }
 
-.page-layout-1column .product-info-main {
-    width: 45%;
-}
-
-.page-layout-1column .product.media {
-    width: 55%;
-}
-
 .block.upsell .product-item-info {
     display: flex;
 }
@@ -215,4 +208,36 @@ button.action.tocart.primary {
 
 p.minimal-price {
     display: flex;
+}
+.block.related {
+    float: left;
+}
+@media screen and (max-width: 506px){
+    .page-layout-1column .products-grid .product-item {
+        width: 40%;
+    }
+    ol.products.list.items.product-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .block.upsell .product-item-info {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1065px){
+    .view-product {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1065px){
+    .page-layout-1column .product-info-main {
+        width: 45%;
+    }
+
+    .page-layout-1column .product.media {
+        width: 55%;
+    }
 }
