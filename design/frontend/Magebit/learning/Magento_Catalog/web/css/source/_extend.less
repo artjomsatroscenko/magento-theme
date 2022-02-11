@@ -3,7 +3,7 @@ a.action.view {
 }
 
 a.action.add {
-    padding: 5px;
+    padding: 5px 7px 5px 7px;
     color: black;
 }
 
@@ -14,7 +14,7 @@ a.action.add {
 }
 
 .product-info-main .product-info-price {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .product-info-main .rating-summary, .customer-review .rating-summary {
@@ -32,7 +32,7 @@ a.action.add {
 .product-info-main .product-info-stock-sku {
     float: none;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 13px;
 }
 
 .action.primary, .action-primary {
@@ -54,7 +54,7 @@ a.action.add {
 
 .product-description {
     background: #f9f9f9;
-    padding: 20px;
+    padding: 22px 20px 20px 15px;
 }
 
 .product-description ul {
@@ -115,15 +115,15 @@ block-title.title {
 
 #custom-qty input {
     width: 80px;
-    height: 45px;
+    height: 50px;
     text-align: center;
     border-left: none;
     border-right: none;
 }
 
 #custom-qty button {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: white;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -209,30 +209,66 @@ button.action.tocart.primary {
 p.minimal-price {
     display: flex;
 }
+
 .block.related {
     float: left;
 }
-@media screen and (max-width: 506px){
+
+.product-info-main .page-title-wrapper h1 {
+    margin-bottom: 2px;
+}
+
+.product-reviews-summary .reviews-actions {
+    font-size: 12px;
+}
+
+.product-info-price .price-box .price-container .price {
+    font-size: 32px;
+}
+
+.product-description ul {
+    margin-bottom: 0.5rem;
+}
+
+.product-info-main .product-add-form {
+    padding-top: 0px;
+}
+
+.block.related {
+    margin-top: 45px;
+}
+
+.product-item .tocart {
+    font-size: 18px;
+}
+
+.product-item {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 506px) {
     .page-layout-1column .products-grid .product-item {
         width: 40%;
     }
+
     ol.products.list.items.product-items {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .block.upsell .product-item-info {
         flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 1065px){
+@media screen and (max-width: 1065px) {
     .view-product {
         display: none;
     }
 }
 
-@media screen and (min-width: 1065px){
+@media screen and (min-width: 1065px) {
     .page-layout-1column .product-info-main {
         width: 45%;
     }
